@@ -1,0 +1,166 @@
+.overview {
+  position: relative;
+  padding-block: $base-spacing * 8.25;
+
+  @include sm {
+    padding-block: $base-spacing * 10;
+  }
+
+  @include lg {
+    margin-block: $base-spacing * 1.5 $base-spacing * 1.75;
+    padding-block: $base-spacing * 8.25;
+  }
+
+  @include xl {
+    margin-block: $base-spacing * 3 $base-spacing * 3.75;
+  }
+
+  @include xxl {
+    margin-block: $base-spacing * 5 $base-spacing * 5.75;
+  }
+
+  @include breakpoint(1536px) {
+    margin-block: $base-spacing * 7 $base-spacing * 7.75;
+  }
+
+  .overview__img {
+    // @include sm {
+    // }
+
+    // @include md {
+    // }
+
+    @include lg {
+      max-width: 32rem;
+    }
+
+    @include xl {
+      max-width: 41rem;
+    }
+
+    @include xxl {
+      max-width: unset;
+    }
+
+    @include breakpoint(1536px) {
+      max-width: 52rem;
+    }
+
+    .overview__img-desktop {
+      display: none;
+
+      @include lg {
+        display: block;
+      }
+
+      @include breakpoint(1536px) {
+        width: 100%;
+      }
+    }
+
+    .overview__img-mobile {
+      @include lg {
+        display: none;
+      }
+    }
+  }
+
+  .overview__title-wrap {
+    // border: 1px solid red;
+    padding-block: $base-spacing * 4;
+    padding-inline: $base-spacing * 2;
+    text-align: center;
+    background-color: $white;
+    z-index: 1;
+
+    @include sm {
+    }
+    @include md {
+    }
+    @include lg {
+      position: absolute;
+      right: 0;
+      bottom: 5.5rem;
+      max-width: 27rem;
+      padding: 0;
+      padding-block: $base-spacing * 3 $base-spacing;
+      padding-left: $base-spacing * 3;
+      text-align: start;
+    }
+    @include xl {
+      bottom: 5.5rem;
+      max-width: 34.115rem;
+      padding-block: $base-spacing * 6 $base-spacing;
+      padding-left: $base-spacing * 6;
+    }
+
+    @include xxl {
+      bottom: 5.5rem;
+      max-width: 34.115rem;
+      padding-block: $base-spacing * 8 $base-spacing;
+      padding-left: $base-spacing * 8;
+    }
+
+    @include breakpoint(1536px) {
+      max-width: 45rem;
+      padding-block: $base-spacing * 10 $base-spacing;
+      padding-left: $base-spacing * 10;
+    }
+
+    .overview__title {
+      font-size: $base-font-size * 2.075;
+      font-weight: 300;
+      text-wrap: balance;
+
+      @include sm {
+        font-size: $base-font-size * 2.35;
+      }
+
+      @include md {
+        font-size: $base-font-size * 2.5;
+      }
+
+      @include lg {
+        font-size: $base-font-size * 2.075;
+      }
+
+      @include xl {
+        font-size: $base-font-size * 2.75;
+      }
+
+      @include xxl {
+        font-size: $base-font-size * 3;
+      }
+
+      @include breakpoint(1536px) {
+        font-size: $base-font-size * 4;
+      }
+    }
+    .overview__description {
+      margin-top: $base-spacing * 1.595;
+      font-size: $base-font-size * 0.9375;
+      font-weight: 400;
+      color: $dark-gray;
+      @include sm {
+        font-size: $base-font-size;
+      }
+
+      @include md {
+        margin-top: $base-spacing * 1.85;
+        text-align: start;
+      }
+
+      @include lg {
+        font-size: $base-font-size * 0.9375;
+      }
+
+      @include xl {
+        margin-top: $base-spacing * 2.25;
+        line-height: 1.5;
+      }
+
+      // @include xxl {
+      // }
+    }
+  }
+}

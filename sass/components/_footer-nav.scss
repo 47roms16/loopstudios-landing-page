@@ -1,0 +1,16 @@
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: $base-spacing * 1.75;
+
+  @include lg {
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: $base-spacing * 2.75;
+  }
+
+  .footer__nav-link {
+    font-size: $base-font-size * 0.9375;
+    color: $white;
+  }
+}

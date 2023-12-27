@@ -1,0 +1,215 @@
+.projects {
+  display: grid;
+  padding-bottom: $base-spacing * 2;
+  gap: $base-spacing * 2.85;
+
+  @include md {
+    grid-row-gap: $base-spacing * 3;
+  }
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: $base-spacing * 3.75;
+  }
+
+  @include xl {
+    grid-row-gap: $base-spacing * 4;
+  }
+
+  @include xxl {
+    grid-row-gap: $base-spacing * 5.3;
+  }
+
+  @include breakpoint(1536px) {
+    grid-row-gap: $base-spacing * 5.75;
+  }
+
+  .projects__title-wrap {
+    padding-block: $base-spacing * 1.25;
+    text-align: center;
+
+    @include lg {
+      grid-column: 1 / span 2;
+      place-self: start;
+    }
+
+    @include xxl {
+      text-align: start;
+    }
+
+    .projects__title-h2 {
+      font-size: $base-font-size * 2.075;
+      font-weight: 300;
+
+      @include sm {
+        font-size: $base-font-size * 2.25;
+      }
+
+      @include md {
+        font-size: $base-font-size * 2.5;
+      }
+
+      @include lg {
+        font-size: $base-font-size * 2.75;
+      }
+
+      @include xl {
+        font-size: $base-font-size * 2.85;
+      }
+
+      @include xxl {
+        font-size: $base-font-size * 3;
+      }
+    }
+  }
+
+  .projects__ul {
+    display: grid;
+    gap: $base-spacing * 2;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    @include lg {
+      order: 1;
+      grid-column: span 4;
+      grid-template-columns: repeat(4, 1fr);
+      gap: $base-spacing * 2.5;
+    }
+
+    .projects-card {
+      position: relative;
+      color: $white;
+      transition: color 0.3s ease-in-out;
+
+      @include breakpoint(1536px) {
+        width: 21.25rem;
+      }
+
+      .li-img {
+        .mobile-img {
+          @include lg {
+            display: none;
+          }
+        }
+        .desktop-img {
+          display: none;
+
+          @include lg {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+
+      .li__title-wrap {
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        max-width: 11rem;
+        padding: $base-spacing * 1.75;
+        align-items: flex-end;
+
+        @include sm {
+          max-width: 15rem;
+          padding-block: $base-spacing * 2.5;
+          padding-inline: $base-spacing * 3.25;
+        }
+
+        @include lg {
+          max-width: 100%;
+          padding-block: $base-spacing * 1.75;
+          padding-inline: $base-spacing * 2.25;
+        }
+
+        @include lg {
+          max-width: 95%;
+        }
+
+        .projects__li-title {
+          font-size: $base-font-size * 1.555;
+          font-weight: 300;
+
+          @include sm {
+            font-size: $base-font-size * 1.75;
+          }
+
+          @include md {
+            font-size: $base-font-size * 1.85;
+          }
+
+          @include lg {
+            font-size: $base-font-size * 1.575;
+          }
+
+          @include xl {
+            font-size: $base-font-size * 2;
+          }
+
+          @include breakpoint(1536px) {
+            font-size: $base-font-size * 2.75;
+          }
+        }
+
+        .projects__li-title.wrap {
+          max-width: 5ch;
+        }
+      }
+    }
+
+    .projects-card::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      inset: 0;
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0)
+      );
+      transition: background-color 0.3s ease-in-out;
+
+      @include lg {
+        background-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0)
+        );
+      }
+    }
+
+    .projects-card:hover::before {
+      background-color: rgba(255, 255, 255, 0.7);
+      background-image: unset;
+    }
+
+    .projects-card:hover {
+      color: $black;
+    }
+  }
+
+  .projects__btn:any-link {
+    padding-block: $base-spacing * 0.75;
+    padding-inline: $base-spacing * 3.25;
+    font-size: $base-font-size * 0.9375;
+    font-family: $ff-body;
+    letter-spacing: 0.3rem;
+    color: $black;
+    border: 1px solid $black;
+    place-self: center;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+    @include lg {
+      place-self: end;
+      align-self: center;
+      grid-column: 4 / 5;
+    }
+  }
+
+  .projects__btn:hover,
+  .projects__btn:focus {
+    color: $white;
+    background-color: $black;
+  }
+}

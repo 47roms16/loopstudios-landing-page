@@ -1,0 +1,37 @@
+.footer {
+  margin-top: $base-spacing * 6.2;
+
+  .footer-wrap {
+    display: flex;
+    flex-direction: column;
+    padding-block: $base-spacing * 4.85;
+    text-align: center;
+    gap: $base-spacing * 4.125;
+
+    @include lg {
+      padding-block: $base-spacing * 3.75 $base-spacing;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer__nav-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $base-spacing * 2.85;
+
+      @include lg {
+        align-items: flex-start;
+      }
+
+      .logo {
+        max-width: 9.25rem;
+
+        @include lg {
+          max-width: 9rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+// body {
+// }
+
+.link {
+  position: relative;
+}
+
+.link:after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: $white;
+  transition: transform 0.3s;
+}
+
+.link::after {
+  transform: scale(0);
+}
+
+.link:hover::after,
+.link:focus::after {
+  transform: scale(1);
+}
+
+.social-link {
+  position: relative;
+}
+
+.social-link:after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: $white;
+  transition: transform 0.3s;
+}
+
+.social-link::after {
+  transform: scale(0);
+}
+
+.social-link:hover::after,
+.social-link:focus::after {
+  transform: scale(1);
+}

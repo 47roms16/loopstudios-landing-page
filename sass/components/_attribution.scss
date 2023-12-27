@@ -1,0 +1,13 @@
+.attribution {
+  display: flex;
+  padding: $base-spacing * 0.5;
+  font-size: $base-font-size * 0.75;
+  font-weight: 300;
+  color: $white;
+  justify-content: center;
+
+  .attribution-link:any-link {
+    font-weight: 600;
+    color: $white;
+  }
+}

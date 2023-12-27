@@ -1,0 +1,51 @@
+.header {
+  padding-block: $base-spacing * 3.5;
+  z-index: 9999;
+
+  @include md {
+    padding-block: $base-spacing * 4;
+  }
+
+  @include xl {
+    padding-block: $base-spacing * 5.25;
+  }
+
+  @include breakpoint(1536px) {
+    padding-block: $base-spacing * 5.5;
+  }
+
+  .logo {
+    z-index: 9999;
+    @include breakpoint(1536px) {
+      width: 15rem;
+    }
+    img {
+      max-width: 9.25rem;
+
+      @include md {
+        max-width: 11rem;
+      }
+      @include lg {
+        max-width: 13rem;
+      }
+
+      @include xxl {
+        max-width: 15rem;
+      }
+
+      @include breakpoint(1536px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .toggle-menu-btn {
+    z-index: 9999;
+  }
+}

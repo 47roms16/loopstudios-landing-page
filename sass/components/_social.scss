@@ -1,0 +1,24 @@
+.social-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: $base-spacing * 1.5;
+
+  @include lg {
+    align-items: flex-end;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: $base-spacing * 1.5;
+  }
+
+  .copyright {
+    font-size: $base-font-size * 0.965;
+    color: $very-dark-gray;
+
+    @include lg {
+      font-size: $base-font-size * 0.9375;
+    }
+  }
+}

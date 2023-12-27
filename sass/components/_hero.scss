@@ -1,0 +1,91 @@
+.hero {
+  height: 44.5rem;
+  background-image: url("../images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+
+  // @include sm {
+  // }
+  @include md {
+    height: 40.575rem;
+    background-image: url("../images/desktop/image-hero.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  @include lg {
+  }
+  // @include xl {
+  // }
+  // @include xxl {
+  // }
+  @include breakpoint(1536px) {
+    background-size: cover;
+  }
+
+  .hero-title-wrap {
+    margin-top: $base-spacing * 13.75;
+    padding-block: $base-spacing * 2.175 $base-spacing * 1.5;
+    padding-inline: $base-spacing * 2;
+    border: 2px solid $white;
+
+    @include sm {
+      max-width: 22.25rem;
+    }
+
+    @include md {
+      max-width: 24.25rem;
+      margin-top: $base-spacing * 11.75;
+    }
+
+    @include lg {
+      max-width: 31rem;
+    }
+
+    @include xl {
+      max-width: 38rem;
+      margin-top: $base-spacing * 10.75;
+    }
+
+    @include xxl {
+      max-width: 40.75rem;
+    }
+
+    @include breakpoint(1536px) {
+      max-width: 45rem;
+      margin-top: $base-spacing * 9;
+    }
+
+    .hero-title {
+      font-size: $base-font-size * 2.575;
+      font-weight: 300;
+      line-height: 0.95;
+      color: $white;
+      transition: all 0.3s;
+
+      @include sm {
+        font-size: $base-font-size * 2.75;
+      }
+
+      @include md {
+        font-size: $base-font-size * 3;
+      }
+
+      @include lg {
+        font-size: $base-font-size * 3.75;
+      }
+
+      @include xl {
+        font-size: $base-font-size * 4;
+      }
+
+      @include xxl {
+        font-size: $base-font-size * 4.5;
+      }
+
+      @include breakpoint(1536px) {
+        font-size: $base-font-size * 5;
+      }
+    }
+  }
+}

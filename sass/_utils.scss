@@ -1,0 +1,61 @@
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.nowrap {
+  text-wrap: nowrap;
+}
+
+.container {
+  // border: 1px solid white;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+  transition: width 500ms ease-in-out, max-width 500ms ease-in-out;
+  @include xs {
+    max-width: 91%;
+  }
+  @include sm {
+    max-width: 600px;
+  }
+  @include md {
+    max-width: 700px;
+  }
+  @include lg {
+    max-width: 825px;
+  }
+  @include xl {
+    max-width: 1024px;
+  }
+  @include xxl {
+    max-width: 1125px;
+  }
+  @include breakpoint(1536px) {
+    max-width: 1480px;
+  }
+}
+
+.heading {
+  font-family: $ff-heading;
+  text-transform: uppercase;
+}
+
+.text {
+  font-family: $ff-body;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
+}
