@@ -10,9 +10,7 @@ function buildStyles() {
     .pipe(
       purgecss({
         content: ["*.html"],
-        options: {
-          safelist: ["hidden", "mobile-nav-visible"],
-        },
+        safelist: ["hidden", "visible", "mobile-nav-visible"],
       })
     )
     .pipe(dest("css"));
